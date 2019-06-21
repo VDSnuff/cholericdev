@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cholericdev.web", "cholericdev.web\cholericdev.web.csproj", "{660C9E84-1F84-4F47-A7DE-15BDBC5DD3D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cholericdev.model", "cholericdev.model\cholericdev.model.csproj", "{BD3ACF15-DA18-4E92-9A9E-C06DB11A2C83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cholericdev.data", "cholericdev.data\cholericdev.data.csproj", "{BB194B53-386A-4EA9-BAFD-5C452F660099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cholericdev.core", "cholericdev.core\cholericdev.core.csproj", "{6AAA25AF-80F8-4290-B6A3-1E2925469334}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cholericdev.common", "cholericdev.common\cholericdev.common.csproj", "{C566C07D-1178-4EC3-8B71-563700D2F284}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{660C9E84-1F84-4F47-A7DE-15BDBC5DD3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{660C9E84-1F84-4F47-A7DE-15BDBC5DD3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{660C9E84-1F84-4F47-A7DE-15BDBC5DD3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3ACF15-DA18-4E92-9A9E-C06DB11A2C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3ACF15-DA18-4E92-9A9E-C06DB11A2C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3ACF15-DA18-4E92-9A9E-C06DB11A2C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3ACF15-DA18-4E92-9A9E-C06DB11A2C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB194B53-386A-4EA9-BAFD-5C452F660099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB194B53-386A-4EA9-BAFD-5C452F660099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB194B53-386A-4EA9-BAFD-5C452F660099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB194B53-386A-4EA9-BAFD-5C452F660099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AAA25AF-80F8-4290-B6A3-1E2925469334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AAA25AF-80F8-4290-B6A3-1E2925469334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AAA25AF-80F8-4290-B6A3-1E2925469334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AAA25AF-80F8-4290-B6A3-1E2925469334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C566C07D-1178-4EC3-8B71-563700D2F284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C566C07D-1178-4EC3-8B71-563700D2F284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C566C07D-1178-4EC3-8B71-563700D2F284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C566C07D-1178-4EC3-8B71-563700D2F284}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
