@@ -27,6 +27,9 @@ namespace cholericdev.web
                 cfg.UseNpgsql(Configuration.GetConnectionString("CholericdevDBConnectionString"))
                 );
 
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IPostRepository, PostRepository>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the Angular files will be served from this directory

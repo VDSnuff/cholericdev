@@ -1,38 +1,59 @@
 ﻿using cholericdev.model;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace cholericdev.data
 {
     public class PostRepository : IPostRepository
     {
-        public Post Add(Post newEvent)
+
+        public PostRepository(CholericdevDbContext ctx, ILogger<PostRepository> logger)
         {
-            throw new System.NotImplementedException();
+            this.ctx = ctx;
+            this.logger = logger;
+        }
+
+        protected internal readonly CholericdevDbContext ctx;
+        protected internal readonly ILogger<PostRepository> logger;
+
+        public Post Add(Post newPost)
+        {
+            ctx.Add(newPost);
+            return newPost;
         }
 
         public bool Commit()
         {
-            throw new System.NotImplementedException();
+            return ctx.SaveChanges() > 0;
         }
 
         public Post Delete(int id)
         {
-            throw new System.NotImplementedException();
+            var deletedPost = GetById(id);
+            if (deletedPost != null)
+            {
+                ctx.Posts.Remove(deletedPost);
+            }
+            return deletedPost;
         }
 
         public IEnumerable<Post> GetAll()
         {
-            throw new System.NotImplementedException();
+            return ctx.Posts.Include(u => u.User).Include(c => c.Comments).Include(c => c.Category).ToList();
         }
 
         public Post GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return ctx.Posts.Find(id);
         }
 
-        public Post Update(Post uodatedEvent)
+        public Post Update(Post updatedPost)
         {
-            throw new System.NotImplementedException();
+            var entyti = ctx.Posts.Attach(updatedPost);
+            entyti.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            return updatedPost;
         }
     }
 
