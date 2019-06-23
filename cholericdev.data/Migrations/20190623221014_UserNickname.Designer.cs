@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using cholericdev.data;
@@ -9,9 +10,10 @@ using cholericdev.data;
 namespace cholericdev.data.Migrations
 {
     [DbContext(typeof(CholericdevDbContext))]
-    partial class CholericdevDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190623221014_UserNickname")]
+    partial class UserNickname
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
