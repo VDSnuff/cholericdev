@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/dataService';
+import { Post } from '../shared/post';
 
 @Component({
   selector: 'app-post-list',
@@ -11,7 +12,7 @@ export class PostListComponent implements OnInit {
   constructor(private data: DataService) {
   }
 
-  public posts = [];
+  public posts: Post[] = [];
 
   ngOnInit(): void {
     this.data.loadPosts()
