@@ -26,7 +26,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\about-me\about-me.component.ts" />
+    <None Remove="ClientApp\src\app\contact\contact.component.ts" />
+    <None Remove="ClientApp\src\app\project-list\project-list.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\cholericdev.data\cholericdev.data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\about-me\about-me.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\contact\contact.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\project-list\project-list.component.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
